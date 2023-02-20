@@ -1,0 +1,16 @@
+<form action="answer" data-turbo="false" class="input-group">
+  <input type="text" name="question" value="<%= params[:question] %>" class="mb-3">
+  <input type= "submit" value="Ask!" class="btn btn-primary mb-3">
+</form>
+
+  <div class = "dialog">
+    <li class="p-2"><%=@your_message%></li>
+    <li class="text-muted p-2"> - You</li>
+  </div>
+  <div class = "dialog">
+    <li class="bg-warning p-2 text-dark bg-opacity-25"><%=@coach_answer%></li>
+    <li class="text-muted p-2"> - Your coach</li>
+  </div>
+
+
+<%= link_to 'Ask a new question', ask_path %>
